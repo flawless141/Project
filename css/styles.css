@@ -33,6 +33,9 @@
 }
 
 /*Global(BASE)*/
+* {
+    box-sizing: border-box;
+}
 body {
     color: var(--color-primary-dark);
     font-family: Poppins, sans-serif;
@@ -40,12 +43,44 @@ body {
     font-weight: 400;
     line-height: 1.5;
     font-style: normal;
+    margin: 0;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+p {
+    margin-top: 0;
 }
 ul {
     list-style-type: none;
 }
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.section {
+    padding: 48px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1288px;
+    margin: 0 auto;
+    padding: 16px;
+}
 /* Buttons */
 .button {
+    padding: 16px 32px;
     color: var(--color-primary-light);
     background-color: var(--color-brand-light);
     border: 2px solid var(--color-brand-light);
@@ -67,11 +102,15 @@ ul {
     font-weight: 600;
 }
 /* Hero section */
+.hero-section {
+    padding: 272px 0;
+}
 .hero-title {
     color: var(--color-primary-light); /* HEX value */
     text-align: center;
     font-size: 128px;
     font-weight: 900;
+    margin-bottom: 0;
 }
 .hero-title .accent {
     color: var(--color-brand-light);
@@ -98,6 +137,10 @@ ul {
 .traditions-text .brand {
     color: var(--color-brand-light);
     font-weight: 600;
+    padding: 96px;
+}
+.traditions-title {
+    margin-bottom: 42px;
 }
 .traditions-text .uppercase {
     text-transform: uppercase;
@@ -105,10 +148,17 @@ ul {
 }
 /* Chef section */
 .chef-title {
+    margin-bottom: 16px;
     font-size: 40px;
     font-weight: 600;
 }
+.chefs-title {
+    margin-bottom: 80px;
+}
 /* Formats section */
+.formats-title {
+    margin-bottom: 80px;
+}
 .format-title {
     font-size: 24px;
     font-weight: 600;
@@ -118,6 +168,14 @@ ul {
     font-weight: 300;
     /* color: var(--color-primary-light); */
 }
+
+
+/* Contacts section */
+contact-title {
+    margin-bottom: 16px;
+}
+
+
 /* Footer */
 .adress-link {
     font-size: 16px;
