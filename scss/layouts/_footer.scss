@@ -6,59 +6,84 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-.footer::before,
-.footer::after {
-  position: absolute;
-  bottom: 0;
-  background-repeat: no-repeat;
-  content: '';
-}
-.footer::before {
-  left: 0;
-  width: 180px;
-  height: 120px;
-  background-image: url(../Images/decor-bread-small.png);
-}
-.footer::after {
-  right: 0;
-  width: 380px;
-  height: 190px;
-  background-image: url(../Images/decor-bread-large.png);
-}
-.footer-container {
-  display: flex;
-  gap: 20px;
-}
-.footer-nav,
-.footer-adress {
-  display: flex;
-  flex-basis: 50%;
-  gap: 20px;
-}
-.footer-logo,
-.footer-menu {
-  flex-grow: 1;
-}
-.adress-list,
-.adress-info {
-  flex-grow: 1;
-}
-.adress-link {
-  font-size: 16px;
-  font-weight: 300;
-  color: var(--color-primary-light);
-}
-.adress-link:hover {
-  color: var(--color-brand-normal);
-  text-decoration: none;
-}
-.adress-socials {
-  fill: var(--color-primary-light);
-}
-.adress-socials:hover {
-  fill: var(--color-brand-normal);
-}
-.adress-copyright {
-  font-size: 14px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: 0;
+    background-repeat: no-repeat;
+    content: '';
+  }
+
+  &::before {
+    left: 0;
+    width: 180px;
+    height: 120px;
+    background-image: url(../Images/decor-bread-small.png);
+  }
+  &::after {
+    right: 0;
+    width: 380px;
+    height: 190px;
+    background-image: url(../Images/decor-bread-large.png);
+  }
+
+  &__container {
+    display: flex;
+    gap: 20px;
+    padding-top: 32px;
+  }
+
+  &__nav,
+  &__address {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+  }
+
+  &__logo,
+  &__menu {
+    flex-grow: 1;
+  }
+
+  &__link {
+    margin-bottom: 16px;
+  }
+  &__list,
+  &__address-info {
+    flex-grow: 1;
+  }
+
+  &__address-link {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-primary-light);
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--color-brand-normal);
+    }
+  }
+
+  &__socials {
+    fill: var(--color-primary-light);
+
+    &:hover {
+      fill: var(--color-brand-normal);
+    }
+  }
+
+  &__socials-icon {
+    fill: var(--color-primary-light);
+    margin-right: 22px;
+
+    &:hover {
+      animation: icon-bump 2s;
+    }
+  }
+
+  &__adress-copyright {
+    font-size: 14px;
+  }
 }
